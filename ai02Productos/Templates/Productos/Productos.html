@@ -1,0 +1,91 @@
+{% extends "Home/base.html" %}
+{% load static %} 
+{% block content %}
+<div class="nuevaSeccion">
+    <section id="bannerProductos" class="bannerclass">
+        <h1>Somos la <br> empresa que <br> constuye el futuro <br> con inteligencia</h1>
+    </section>
+    <div class="SeccionesGenerales">
+        <section class="seccionInicial">
+            <header> <h2>Productos de aicros</h2></header>
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure.
+                </p>
+                <p>
+                    Dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                </p>    
+            </div>
+        </section>
+    </div>
+    <div class="backgraondline"></div>
+    <div class="SeccionesGenerales SegundoBloque">        
+        <section>
+            <div class="textoBackground">
+                <header class="blanco"><h2>Desarrollados por aicros</h2></header>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure.
+                </p>
+            </div>
+            <div >
+
+                {% for i in desarrollados %}
+
+                    <div class="cartasGenerales cartasProductos">
+                        <article class="logoProducto">
+                            <img src="{{i.Logotipo.url}}" alt="">
+                        </article>
+                        <article class="infoProducto">
+                            <div>
+                                <h3>{{i}}</h3>
+                                <img src="{{i.Desarrollo.url}}" alt="icono">
+                            </div>
+                            <p>
+                                {{i.Contenido}}
+                            </p>
+                            <button>Obtener</button>
+                        </article>
+                    </div>
+
+                {% endfor %}
+                
+            </div>            
+        </section>
+    </div>
+    <div class="backgraondline"></div>
+    <div class="SeccionesGenerales SegundoBloque">        
+        <section>
+            <div class="textoBackground">
+                <header class="blanco"><h2>Distribuidos por aicros</h2></header>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure.
+                </p>
+            </div>
+            <div >
+                
+                {% for i in distrubuidos %}
+
+                    <div class="cartasGenerales cartasProductos">
+                        <article class="logoProducto">
+                            <img src="{{i.Logotipo.url}}" alt="">
+                        </article>
+                        <article class="infoProducto">
+                            <div>
+                                <h3>{{i}}</h3>
+                                <img src="{{i.Desarrollo.url}}" alt="icono">
+                            </div>
+                            <p>
+                                {{i.Contenido}}
+                            </p>
+                            <button>Obtener</button>
+                        </article>
+                    </div>
+
+                {% endfor %}
+
+            </div>            
+        </section>
+    </div>
+</div>
+ 
+{% endblock %}

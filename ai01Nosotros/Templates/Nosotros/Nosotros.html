@@ -1,0 +1,103 @@
+{% extends "Home/base.html" %}
+{% load static %}
+{% block content %}
+<div class="nuevaSeccion">
+    <section id="bannerNosotros" class="bannerclass">
+        <h1>Somos la <br> empresa que <br> constuye el futuro <br> con inteligencia</h1>
+    </section>
+    <div class="SeccionesGenerales">
+        <section class="seccionInicial">
+            <header> <h2>¿Quiénes somos?</h2> </header>
+            <div> 
+                <p> 
+                    <strong>aicros</strong> es una empresa cubana dedicada, por mas de 25 años, al desarrollo de soluciones tecnológicas innovadoras, con un enfoque especializado hacia el sector de la construcción. Posee una amplia cartera de productos y servicios sustentada en el uso de las TIC, la automática y la gestión del conocimiento. Certificada con las normas de calidad ISO 9001.
+                </p> 
+                <p>
+                    Cuenta con mas de 70 especialistas altamente calificados en las áreas de informática, automática, telecomunicaciones y gestión. Ha estructurado una sólida alianza estratégica con el sector privado nacional para aumentar capacidades productivas y la coordinación de otras acciones para el acceso a nuevos mercados.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <header> <h2>Nuestros Valore</h2> </header>
+                <div class="cartasGenerales">
+
+                    {% for i in valores %}
+                        
+                        <article>
+                            <h3>{{i}}</h3>
+                            <p>{{i.Contenido}}</p>
+                        </article>
+
+                    {% endfor %}
+                    
+                </div>
+        </section>
+    </div>
+    <div class="backgraondline"></div>
+    <div class="SeccionesGenerales SegundoBloque">
+        <section id="Historias">
+            <header class="blanco"> <h2>Más de 25 años de historias</h2> </header>
+            <div id="lineaDeTiempoContinuo" ></div>    
+            <div class="HistoriaSlider cartasGenerales">
+                        
+                {% for i in historias  %}
+                    <div>
+                        <div class="lineaDeTiempo">
+                            <div></div>
+                        </div>
+                        <div class="blanco"> 
+                            <h2>{{i}}</h2>
+                        </div>
+                        <article>
+                            {% for j in cronologias %}
+                                {% if j.Periodo == i %}                                        
+                                            
+                                    <p> <strong>{{j}} -</strong> {{j.Contenido}} </p>                                        
+                                            
+                                {% endif %}
+                            {% endfor %}
+                        </article> 
+                    </div>
+                {% endfor %}
+
+            </div>
+        </section>
+
+        <section id="Equipo">
+            <header><h2>Equipo de Trabajo</h2></header>
+            <div class="cartasEquipo">
+
+                {% for i in equipos %}
+
+                    <article class="cartaEquipo">
+                        <div class="fondoEquipo" style="background-image: url('{{i.FotoPerfil.url}}');">
+                            <img src="" alt="">
+                        </div>
+                        <div class="nombre">
+                            <p><strong>{{i.Nombre}}<br> {{i.Apellido}}</strong> </p>
+                            <p><small>{{i.Cargo}}</small></p>
+                        </div>
+                    </article>
+
+                {% endfor %}
+                
+            </div>  
+        </section>
+
+        <section>
+            <header> <h2>Nuestros Valore</h2> </header>
+                <div class="cartasGenerales">
+                    {% for i in valoresfin %}
+                        
+                        <article>
+                            <h3>{{i}}</h3>
+                            <p>{{i.Contenido}}</p>
+                        </article>
+
+                    {% endfor %}
+                </div>
+        </section>
+    </div>
+</div>
+{% endblock %}

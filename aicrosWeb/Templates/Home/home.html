@@ -1,0 +1,166 @@
+{% extends "Home/base.html" %}
+{% load static %}
+{% block content %}
+   
+        <section id="banner" class="bannerclass">
+            <h1>Somo la <br>a empresa que <br> construye el futuro <br> con inteligencia</h1>        
+        </section>
+         
+        <div id="Secciones">
+            <section id="Primera">
+                <div id="lineas">            
+                    <img src="{% static 'Media/Propuesta de Diseño-174.png'%}" alt="lineas">
+                </div>
+                <div id="PrimerBloque">
+                    <section id="Promociones" class="secciones">
+                        <header> <h2>Promociones</h2> </header>
+                        <div id="contenedor-targetas">
+                            <div class="tarjetas">
+                                
+                                {% for i in promocion %}
+
+                                    <article id="Tarjeta{{i.id}}">
+                                        <h3> {{i}} </h3>
+                                        <p>{{i.Contenido}}</p>
+                                    </article>
+
+                                {% endfor %}
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="Productos" class="secciones">
+                        <article class="Inicial">
+                            <header> <h2>Productos</h2> </header>
+                                <div>
+                                    <h3>Lorem ipsum</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed.</p>
+                                </div>
+                                <a href="{% url 'Productos' %}"> <button><h5>Ir a productos</h5></button> </a>
+                        </article>
+                        <div class="cartas ">
+                            
+                            {% for i in productos %}
+
+                                <article id="carta{{i.id}}">
+                                    <div style="background-image: url( '{{ i.imagen.url }}' );">
+                                    </div>
+                                    <h3>{{i}}</h3>
+                                    <p>{{i.Contenido}}</p>
+                                </article>
+
+                            {% endfor %}                            
+                                                        
+                        </div>
+                    </section>
+
+                    <section id="Servicios" class="secciones">
+                        <article class="Inicial">
+                            <header> <h2>Servicios</h2> </header>
+                                <div>
+                                    <h3>Lorem ipsum</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed.</p>
+                                </div>
+                                <a href="{% url 'Servicios' %}"> <button><h5>Ir a servicios</h5></button> </a>
+                        </article>
+                        <div class="cartas " id="cartas02">
+                            
+                            {% for i in servicios %}
+
+                                <article id="carta{{i.id}}">
+                                    <div style="background-image: url( '{{ i.imagen.url }}' );">
+                                    </div>
+                                    <h3>{{i}}</h3>
+                                    <p>{{i.Contenido}}</p>
+                                </article>
+
+                            {% endfor %}                                                        
+                            
+                        </div>
+                    </section>                
+                                    
+                    <section id="lineasdenegocios" class="secciones">
+                        <header><h2>Lieas de negocios</h2></header>
+                        <div class="card ">
+                            
+                            {% for i in negocios %}
+
+                                <article>                                    
+                                    <img src="{{ i.imagen.url }}" alt="">
+                                    <p>{{i.Contenido}}</p>
+                                </article>
+
+                            {% endfor %}                            
+                            
+                        </div>
+                    </section>
+
+                    <section id="laempresa" class="secciones">
+                        <header><h2>La empresa en sifras</h2></header>
+                        <div class="target">
+                            
+                            {% for i in sifras %}
+
+                                <article id="target{{i.id}}">
+                                    <div>
+                                        <h3>{{i}}</h3>
+                                        <p>{{i.Contenido}}</p>
+                                    </div>
+                                    <div>
+                                        <h2>{{i.numero}}</h2>
+                                    </div>
+                                </article>
+
+                            {% endfor %}                            
+
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <div class="backgra"></div>
+
+        <section id="Segunda">
+            <section id="Noticias">                
+                    <header><h2 >Noticas más relevantes</h2></header>
+                    <div class="publicaciones ">
+                        {% for i in noticias %}
+
+                            <article id="noticia{{i.id}}">
+                                <div class="imagen-noticias" style="background-image: url('{{i.imagen.url}}');"></div>
+                                <h3>{{i}}</h3>
+                                <p>{{i.Contenido}}</p>
+                                <p><small>{{i.Creado}}</small></p>
+                                <div id="redesSociales">
+                                    <svg viewBox="0 0 6 10.3"><path class="svg" d="M5.7,1.9c-1.9-.2-2.2,0-2,1.6H5.4v2H3.7v5.8H1.3V5.5H0V3.6H1.3V2.5A2.3,2.3,0,0,1,3.9,0L5.7.2c.2,0,.3.1.2.4S5.8,1.5,5.7,1.9Z"/></svg>
+                                    <svg viewBox="0 0 11.6 11.6"><path class="svg" d="M5.8,0c.86,0,1.71,0,2.57,0A3.12,3.12,0,0,1,11.56,3.2c.06,1.72.06,3.46,0,5.19a3,3,0,0,1-3,3.12,47,47,0,0,1-5.57,0,3,3,0,0,1-3-3.2C0,6.61,0,4.89,0,3.18A3.09,3.09,0,0,1,3.18,0C4.05,0,4.93,0,5.8,0ZM1.08,5.79h0c0,.89-.05,1.79,0,2.67a2,2,0,0,0,1.87,2,4.87,4.87,0,0,0,.76.06c1.64,0,3.28,0,4.91-.09a1.81,1.81,0,0,0,1.8-1.88c.07-1.83.08-3.68,0-5.52a1.87,1.87,0,0,0-2-1.92C6.75,1,5,1,3.29,1.09A2.07,2.07,0,0,0,1.08,3.36C1.05,4.17,1.08,5,1.08,5.79Z"/><path class="cls-1" d="M2.8,5.79a3,3,0,1,1,3,3A3,3,0,0,1,2.8,5.79Zm3-1.93A1.93,1.93,0,1,0,7.72,5.75,1.93,1.93,0,0,0,5.8,3.86Z"/><path class="cls-1" d="M9.58,2.66a.68.68,0,0,1-.66.72.7.7,0,0,1-.73-.71A.75.75,0,0,1,8.89,2,.71.71,0,0,1,9.58,2.66Z"/></svg>
+                                    <svg viewBox="0 0 12.16 10.18"><path class="svg" d="M11.88.42,11,1.6l1.06-.27.07.07a8.33,8.33,0,0,1-.82.86.94.94,0,0,0-.37.81A7.23,7.23,0,0,1,.31,9.3,1,1,0,0,1,0,9.06,5.42,5.42,0,0,0,3.52,8a2.65,2.65,0,0,1-2.3-1.75l.86,0A2.88,2.88,0,0,1,.3,3.65l.87.23A2.9,2.9,0,0,1,.67.51a7.4,7.4,0,0,0,5.2,2.66v-.6A2.45,2.45,0,0,1,7.24.33,2.25,2.25,0,0,1,9.76.45a1.29,1.29,0,0,0,1.48.1l.52-.24Z"/></svg>
+                                </div>
+                            </article>
+                                
+                        {% endfor %}                       
+
+
+                    </div>
+            </section>
+
+            <section id="Alianzas">
+                    <header><h2>Alianzas</h2></header>
+                    <article class="alian">
+                        <div id="alianza">
+ 
+                            {% for i in alianzas %}
+
+                                <div class="{{i.id}}">
+                                    <img src="{{i.imagen.url}}" alt="">
+                                </div>
+
+                            {% endfor %}
+
+                        </div>
+                    </article>
+            </section>
+        </sectiom>    
+        
+{% endblock %}

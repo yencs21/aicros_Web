@@ -1,0 +1,732 @@
+*{    
+    margin: 0px;
+    padding: 0px;
+    /*border: 1px solid salmon;*/
+    transition: 0.5s;
+}
+h1{
+    font: 100 20pt 'Helvetica', sans-serif;    
+}
+h2{
+    font: 900 16pt 'Kozuka', sans-serif;
+    text-transform: uppercase;       
+}
+h3{
+    font: 900 14pt  'Kosuka', sans-serif ;
+    letter-spacing: 1px;
+}
+h4{
+    font: 500 14px 'Arial', sans-serif ;    
+}
+h5{
+    font: 500 12px 'Arial', sans-serif ;
+    text-transform: uppercase;
+}
+p{
+    font: 300 10pt/1.4 'Arial', sans-serif;
+    color: rgb(155, 155, 155);
+}
+strong{
+    font: 900 10pt/1.4 'Arial', sans-serif;
+    color: rgb(50,50,50)
+}
+button{
+    color: white;
+    background-color: rgb(153, 25, 25);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 20px;
+}
+button:hover{
+    background-color: rgb(193, 115, 115 );
+}
+a{
+    text-decoration: none;
+}
+svg{
+    fill:#636363;
+    height: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+svg:hover{
+    fill: rgb(204, 204, 204);
+}
+body{
+    position: relative;
+    top: 70px;
+}
+/*--------------------------------------------------Subir*/
+#subir .cls-1{fill:#981914;}
+#subir .cls-2{fill:#fff;}
+#subir{
+    /*border: 1px solid #981914;*/
+    height: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    cursor: pointer;
+    opacity: 0;
+}
+#subir .cls-1:hover{
+    fill:rgb(193, 115, 115 )
+}
+/*-------------------------------------------------------Navegacion*/
+#menu {    
+    display: flex ;
+    justify-content: center;
+    justify-content: space-around ;
+    color: rgb(204, 204, 204);
+    padding: 20px 20px;
+    background-color: rgb(30,30,30);
+    border: 1px solid  rgb(30,30,30);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    transition: 0.7s;
+}
+#menu ul{       
+    list-style: none; 
+    position: relative;
+    top: 15px;
+    /*border: 1px solid red;*/
+    display: flex;
+    justify-content: space-evenly;
+    align-content:space-around;
+    height: 20px   
+}
+#menu li{    
+    display: inline-block;     
+    list-style: none;
+    margin: 0px 13px;
+    /*border: 1px solid red;*/
+}
+#menu a {
+    text-decoration: none;
+    color: rgb(115,115,115);
+}
+#menu svg{
+    position: relative;
+    bottom: 30px;
+    width: 70%;
+    height: 30px; 
+}
+#menu img{
+    height: 40px; 
+}
+
+.bars{
+    display: none;
+}
+
+#menu li :hover{
+    color: rgb(204, 204, 204);
+}
+
+@media screen and (max-width:780px) {  
+    #menu{
+        justify-content: space-between;
+    }
+    .bars{
+        position: relative;
+        right: 50px;
+        top: 5px;
+        width: fit-content;
+        height: fit-content;/**/       
+        display: block;
+        cursor: pointer;
+        background-color: rgb(30,30,30);
+    }
+    .bars .line{
+        /*position: relative;
+        right: 50px;
+        top: 5px;*/
+        width: 30px;
+        height: 4px;
+        background-color: rgb(115,115,115);
+        margin: 6px 0px;
+    }
+    .nav-bar{
+        height: 0px;
+        position: absolute;
+        top: 70px;
+        left: -1px;
+        right: 0;
+        width: 110%;
+        background-color: rgb(35,35,35);
+        overflow: hidden;
+        opacity: 0;
+    }
+    .nav-bar.active{
+        height: 330px;
+        opacity: 1;                
+    }
+    #navegacion ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        width: 80%;
+    }
+    .nav-bar.active ul{
+        opacity: 1;
+    }
+    .nav-bar li{
+        margin: 0;
+        padding-bottom: 30px;
+    }
+    .nav-bar svg{
+        position: relative;
+        bottom: 10px;
+    }
+    
+
+}
+/*---------------------------------------------MenuFijoJS*/
+.abajo #menu{
+    padding: 10px 20px;    
+}
+/*-------------------------------------------------------Banner*/
+#banner{
+    clear: both;    
+    background-image:url("/static/Media/Componentes 27-9-22/Banner/Propuesta de Diseño-181.jpg" );
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    color: rgb(204, 204, 204);    
+    height: 620px;
+}
+#banner h1{   
+    background-image:url("/static/Media/Componentes 27-9-22/Banner/Propuesta de Diseño-19.jpg" );
+    background-size: 1300px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 620px;
+    padding: 220px 0px;
+    text-align: right;        
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;    
+}
+@media screen and (max-width:720px) {
+    #banner h1{
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+    }
+}
+/*------------------------------------------------------------------------------PrimeraSeccion*/
+#Secciones{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    width: 100%;
+    overflow-x: hidden;
+}
+#Primera{
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+}
+#Segunda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:-282px ;  
+}
+#lineas img{
+    width: 115px;
+}
+#PrimerBloque{
+    /*border: 1px solid red;*/
+    width: 1500px;
+    /*max-width:fit-content;
+    overflow: scroll;*/
+}
+@media screen and (max-width:790px) {
+    #lineas{
+        display: none;
+    }
+    #Primera{
+        width: 95%;
+    }
+    #Segunda{
+        width: 98%;
+    }
+}
+@media screen and (max-width:450px) {
+    #Primera{
+        width: 90%;
+    }
+    #Segunda{
+        width: 97%;
+    }
+}
+/*-------------------------------------------------------Seccion1Promociones*/
+#Promociones{
+    margin: 95px 0px;
+}
+#Primera div section header{
+    color: rgb(153, 25, 25);
+    margin: 0px 10px;
+}
+#contenedor-targetas{    
+    max-width: 100%;
+}
+.tarjetas{
+    gap: 10px;
+    color: rgb(240, 240, 240);
+    display: flex ;
+    margin: 30px 0px 0px ;
+    cursor: all-scroll ;
+    overflow-x: hidden ;
+}
+.tarjetas article{    
+    padding: 20px;
+    width: 225px;
+    min-width: 225px;
+    height: 120px;
+    border-radius: 10px;
+    pointer-events: none;
+    object-fit: contain;
+}
+.tarjetas p{
+    color: white;
+}
+.tarjetas article h3{
+    margin-bottom:20px ;
+}
+#Tarjeta1{
+    background-color: rgb(193, 115, 115 );
+    float: left;    
+}
+#Tarjeta2{
+    background-color: rgb(153, 25, 25);
+    float: left;
+}
+#Tarjeta3{
+    background-color: rgb(115, 193, 150 );
+    float: left;
+}
+#Tarjeta4{
+    background-color: rgb(115,115,115) ;
+    float: left;
+}
+/*-------------------------------------------------------Seccion2Productos*/
+#Productos{
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    margin: 105px 0px;
+}
+.Inicial{
+    height: 350px;
+    width: 265px;    
+}
+.Inicial div{
+    padding: 40px 40px 65px 40px;
+}
+.Inicial h3{
+    padding: 20px 0px;
+}
+
+.cartas{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    cursor:all-scroll;
+}
+.cartas article{
+    background-color: white;
+    border-radius: 10px;
+    height: 350px;
+    min-width: 265px;
+    max-width: 265px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 2fr 0.5fr 1.5fr;    
+}
+.cartas h3,.cartas p{
+    padding: 10px 20px;
+}
+.cartas div{
+    background-size: 100%;
+    max-width: 265px;
+    max-height: 200px;
+    border-radius: 10px 10px 0px 0px ;
+}
+
+/*----------------------------------------------------------------------- Servicios */
+#Servicios{
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    margin: 220px 0px 100px;
+}
+@media screen and (max-width:560px) {
+    #Servicios,
+    #Productos{        
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.75fr 1fr;
+    }
+    .Inicial{
+        height: 100%;
+        width: 450px;
+    }
+    .Inicial div{
+        padding: 40px 40px 40px 10px;
+    }
+    .Inicial div h3{
+        padding: 0px;
+    }
+    .Inicial button{
+        margin: 0px 10px;
+    }
+    *{
+        /*border: 1px solid;*/
+        border-color: blue;
+    }
+}
+@media screen and (max-width:450px) {
+    #Servicios,
+    #Productos{        
+        grid-template-rows: 0.85fr 1fr;
+    }
+    .Inicial{
+        width: 350px;
+    }
+
+}
+/*--------------------------------------------------------------------------Lineas de Negocios*/
+#lineasdenegocios{
+    margin:220px 0px 160px ;
+}
+#lineasdenegocios header{
+    padding-bottom: 30px;
+}
+.card{
+    display: flex; 
+    justify-content: start; 
+    overflow-x: hidden;
+    overflow-y: hidden;
+    overflow: hidden;
+    cursor:all-scroll;  
+}
+.card article{
+    gap: 20px;
+    background-color: white;
+    border-radius: 10px;
+    /*max-width: 220px;*/
+    min-width: 220px;
+    min-height: 200px;
+    max-height: 250px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    pointer-events: none;
+}
+.card p{
+    padding: 0px 20px 10px;
+}
+.card img{
+    height: 50px;
+    padding: 20px 0px 0px 20px;
+}
+/*--------------------------------------------------------------------------La empresa en sifras*/
+.target {
+    display: flex;
+    margin: 0px 0px 100px;
+    overflow-x: hidden;
+    cursor:all-scroll; 
+}
+.target article{
+    background-color: white;
+    margin-right: 10px;
+    margin-top: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    min-width: 400px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.target h3{
+    padding: 20px 0px 5px 20px;
+    color: white;
+}
+.target p{
+    padding: 20px;
+    width: 200px;
+    color: white;
+}
+.target h2{
+    padding: 60px 30px;
+    font-size: 72pt;
+}
+#target1{
+    background-color: rgb(234, 208, 208);
+}
+#target1 h2{
+    color: rgb(193, 115, 115 );
+}
+#target2{
+    background-color: rgb(193, 115, 115 );
+}
+#target2 h2{
+    color: rgb(153, 25, 25);
+}
+#target3{
+    background-color: rgb(153, 25, 25);
+}
+#target3 h2{
+    color: black;
+}
+@media screen and (max-width:790px) {
+    #Promociones,
+    #Productos,
+    #Servicios,
+    #lineasdenegocios{
+        margin: 100px 0px;
+    }
+}
+/*------------------------------------------------------Noticias mas relevantes*/
+
+#Noticias{
+    padding-bottom:100px ;    
+}
+#Noticias header{
+    color: white;
+    padding: 20px 0px;
+}
+.publicaciones{
+    margin: 20px 0px;
+    display: flex;
+    gap: 10px;
+    width: 950px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.publicaciones article{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 380px;
+}
+.publicaciones h3{
+    margin: 20px 0px;
+}
+.publicaciones p{
+    margin: 20px 0px 10px;
+}
+#redesSociales{
+    display: flex;    
+}
+#redesSociales svg{
+    padding: 0px 0px 10px;
+    fill: rgb(193, 115, 115 );
+}
+.imagen-noticias{
+    margin: -20px;
+    margin-bottom: 25px;
+    height: 200px;
+    background-size: auto 111%;
+    background-position: center;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #8c8c8c;
+    background-repeat: no-repeat;
+}
+.backgra{  
+    height: 350px;
+    width: 100%;
+    background-image: url("/static//Media/Componentes 27-9-22/Banner/Propuesta de Diseño-49.jpg");
+    background-size: 100% 100%;
+}
+body{
+    background-color: rgb(240, 240, 240);
+}
+#redesSociales svg:hover{
+    fill: rgb(234, 208, 208);
+}
+@media screen and (max-width:1000px){
+    .publicaciones{
+        width: 100%;
+    }
+    #Noticias{
+        width: 90%;
+    }
+}
+@media screen and (max-width:720px){
+    .publicaciones{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;      
+    }
+    .publicaciones article{
+        width: 80%;
+    }
+    #Noticias{
+        width: 90%;
+    }
+}
+/*-----------------------------------------------------------Alianzas*/
+#Alianzas{
+    padding: 20px 0px 100px;
+}
+#Alianzas header{
+    color: rgb(153, 25, 25);
+    padding: 30px 0px;
+}
+#Alianzas article{
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    /*justify-content: space-evenly;
+    gap : 20px;*/
+    width: 950px;
+}    
+#alianza{
+    display: flex;    
+    gap: 30px;
+    display: flex;
+    gap : 10px ;
+    overflow: hidden;
+    cursor: all-scroll;
+    width: 90%;
+    
+}
+#Alianzas img{
+    border-radius: 100px;
+    width: 200px;
+    pointer-events: none;
+}
+
+@media screen and (max-width:1000px){
+    #Alianzas{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 90%;        
+    }
+    #Alianzas article{        
+        width: 100%;
+    }
+}
+
+/*----------------------------------------------------------footer*/
+footer{
+    display: grid;
+    grid-template-columns: 1fr; 
+    background-color: rgb(30,30,30);
+    width: 100%;    
+}
+footer p , footer a {
+    color: rgb(115,115,115);
+    text-decoration: none;
+}
+footer a:hover{
+    color: rgb(204, 204, 204);
+}
+#Footer{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 0px;
+}
+#Footer article{
+    /*display: inline;*/
+    width: 300px;
+}
+#Footer h3{
+    color: white;
+    padding: 40px 0px;
+}
+#Contactenos p{
+    padding-bottom: 20px;
+}
+#Escribenos input,
+#Escribenos select,
+#Escribenos textarea{
+    width: 100%;
+    color: rgb(115,115,115);
+    background-color: rgb(50,50,50);
+    border: none;
+    border-radius: 5px;
+    margin: 5px 0px;
+    padding: 5px 0px 5px 5px;
+}
+#Escribenos button{
+    margin: 15px 0px;
+}
+#Copyright{
+    padding-bottom: 50px;
+    text-align: center;
+    width: 90%;
+}
+#Copyright strong{
+    /*font-weight: 500;*/
+    color: white;
+}
+@media screen and (max-width:1000px){/*720px) {*/
+    #Footer{
+        gap: 20px;
+    }
+    #Footer article{
+        width: 250px;        
+    }
+}
+@media screen and (max-width:850px){/*720px) {*/
+    #Footer{
+        gap: 20px;
+    }
+    #Footer article{
+        width: 210px;        
+    }
+    #Escribenos{
+        width: 200px;
+    }
+    #Escribenos input,
+    #Escribenos select,
+    #Escribenos textarea{
+        width: 200px;
+    }
+}
+@media screen and (max-width:720px) {
+    footer{
+        padding: 10px 10px;
+        width: 96%;
+    }
+    #Footer{
+       display: grid;
+       grid-template-rows: 1fr 2fr 2fr;
+       gap: 0px;
+       width: 70%;
+    }
+    #Footer article{
+        width: 80%;
+        padding: 0px 50px 0px 50px;       
+    }
+    #Escribenos input,
+    #Escribenos select,
+    #Escribenos textarea{
+        width: 95%;
+    }
+    #Escribenos button{
+        padding: 10px 20px;
+    }
+
+    footer *{
+        padding: 0px;
+        margin: 0px;
+        /*border: 1px solid salmon;*/
+    }
+    #Contactenos svg{
+        padding: 0 10px;
+    }
+}
+@media screen and (max-width:520px) {
+    footer{
+        width: 95%;
+    }
+}

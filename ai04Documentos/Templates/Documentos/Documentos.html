@@ -1,0 +1,191 @@
+{% extends "Home/base.html" %}
+{% load static %}
+{% block content %} 
+<div class="nuevaSeccion">
+    <section id="bannerDocumento" class="bannerclass">
+        <h1>Somos la <br> empresa que <br> constuye el futuro <br> con inteligencia</h1>
+    </section>
+    <div class="SeccionesGenerales">
+        <section class="seccionInicial">
+            
+            <header> <h2>Informacion a los clientes</h2></header>
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure.
+                </p>
+                <p>
+                    Dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                </p>    
+            </div>
+
+        </section>
+    </div>
+    <div class="backgraondline"></div>
+    <div class="SeccionesGenerales SegundoBloque">
+        
+        <section class="textoBackground ">
+            <header class="blanco"><h2>Desarrollados por aicros</h2></header>            
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure.
+            </p>
+            
+            <div class="">
+                <article class="DocumentosRecientes cartasDocumentos">
+                    
+                    {% for i in documento %}
+                    
+                        <article>
+                            <a href="{{i.Doc.url}}" target="_blank">
+                                <div>
+                                    <img src="{% static 'Media/Componentes 27-9-22/Íconos/SVG/Propuesta de Diseño-108.svg' %}" alt="icono">
+                                    <p>
+                                        {{i}}
+                                    </p>
+                                </div>
+                            </a>
+                        </article>
+                    
+                    {% endfor %}
+                   
+            </div>
+        </section>
+        
+        <script> 
+            window.data = { data: {{data|safe}} } 
+            window.columnajs = { columnajs: {{columnajs|safe}} }
+        </script>
+        
+        <section id="Buscador">
+            <form action="">{% csrf_token %}
+                <input type="text" name="filtrado" value="{{filtro}}" placeholder="Buscar un Documento">
+                <button> Buscar </button>
+            </form>
+        </section> 
+        {% if contrato %}
+            <section class="Documentos">
+                <header><h2>Contratos</h2></header>
+                <div class="CascadaDocumento">
+                    <article class="cartasDocumentos">
+                        <article id="0{{data.0}}1">
+
+                            {% for i in contrato %}
+                            {% if  i.Doc  %}
+                                <a href="{{i.Doc.url}}" target="_blank">
+                                    <div>
+                                    
+                                        <img src="{% static 'Media/Componentes 27-9-22/Íconos/SVG/Propuesta de Diseño-108.svg' %}" alt="icono">
+                                        <p>
+                                            {{i}}
+                                        </p>
+                                    
+                                    </div>
+                                </a>
+                            {% endif %}
+                            {% endfor %}
+                            
+                        </article>                    
+                        <article id="0{{data.0}}2"></article>
+                        <article id="0{{data.0}}3"></article>
+                    </article>
+                </div>
+            </section>
+        {% endif %}
+        {% if servicio %}
+        <section class="Documentos">
+            <header><h2>Servicios</h2></header>
+            <div class="CascadaDocumento">
+                <article class="cartasDocumentos">
+                    <article id="1{{data.1}}1">
+                        
+                        {% for i in servicio %}
+                        {% if  i.Doc  %}
+                            <a href="{{i.Doc.url}}" target="_blank">
+                                <div>
+                                
+                                    <img src="{% static 'Media/Componentes 27-9-22/Íconos/SVG/Propuesta de Diseño-108.svg' %}" alt="icono">
+                                    <p>
+                                        {{i}}
+                                    </p>
+                                
+                                </div>
+                            </a>
+                        {% endif %}
+                        {% endfor %}
+                        
+                    </article>                    
+                    <article id="1{{data.1}}2"></article>
+                    <article id="1{{data.1}}3"></article>
+                </article>
+            </div>
+            
+        </section>
+        {% endif %}
+        {% if catalogo %}
+        <section class="Documentos">
+            <header><h2>Catalogos</h2></header>
+            <div class="CascadaDocumento">
+                <article class="cartasDocumentos">
+                    <article id="2{{data.2}}1">
+                        
+                        {% for i in catalogo %}
+                        {% if  i.Doc  %}
+                            <a href="{{i.Doc.url}}" target="_blank">
+                                <div>
+                                
+                                    <img src="{% static 'Media/Componentes 27-9-22/Íconos/SVG/Propuesta de Diseño-108.svg' %}" alt="icono">
+                                    <p>
+                                        {{i}}
+                                    </p>
+                                
+                                </div>
+                            </a>
+                        {% endif %}
+                        {% endfor %}
+                        
+                    </article>                    
+                    <article id="2{{data.2}}2"></article>
+                    <article id="2{{data.2}}3"></article>
+                </article>
+            </div>            
+        </section>
+        {% endif %}
+        {% if otro %}
+        <section class="Documentos">
+            <header><h2>Otros Documentos</h2></header>
+            <div class="CascadaDocumento">
+                <article class="cartasDocumentos">
+                    <article id="3{{data.3}}1">
+                        
+                    {% for i in otro %}
+                        {% if  i.Doc  %}
+                        <a href="{{i.Doc.url}}" target="_blank">
+                            <div>
+                            
+                                <img src="{% static 'Media/Componentes 27-9-22/Íconos/SVG/Propuesta de Diseño-108.svg' %}" alt="icono">
+                                <p>
+                                    {{i}}
+                                </p>
+                            
+                            </div>
+                        </a>
+                        {% endif %} 
+                    {% endfor %}
+                        
+                    </article>                    
+                    <article id="3{{data.3}}2"></article>
+                    <article id="3{{data.3}}3"></article>
+                </article>
+            </div>            
+        </section>
+        {% endif %}
+        
+        {% if vacio is 4 %}
+            <section>
+                <p>Lo sentimos no existen documentos relacionados a su busquedas.</p>
+            </section>
+        {% endif %}
+
+    </div>
+</div>
+
+{% endblock %}

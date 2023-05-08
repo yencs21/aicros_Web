@@ -1,0 +1,376 @@
+
+.bannerclass {
+    clear: both;    
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    color: rgb(204, 204, 204);    
+    height: 201px;
+    width: 100%;
+    
+}
+.bannerclass h1{    
+    background-size: 1300px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 200px;
+    padding: 50px 0px 0px;
+    text-align: right;        
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;    
+}
+#bannerNosotros{
+    background-image:url("/static/Media/Componentes 27-9-22/Banner/Propuesta de Diseño-180.jpg" );
+}
+#bannerNosotros h1{
+    background-image:url("/static/Media/Componentes 27-9-22/Banner/Propuesta de Diseño-48.jpg" );
+}
+
+#bannerProductos{
+    background-image:url("/static/Media/Componentes 27-9-22/Banner/Propuesta de Diseño-180.jpg" );
+}
+#bannerProductos h1{
+    background-image:url("/static/Media/Componentes 27-9-22/Banner/Propuesta de Diseño-46.jpg" );
+}
+
+#bannerServicios{
+    background-image:url("/static/Media/Componentes 27-9-22/Banner/Propuesta de Diseño-180.jpg" );
+}
+#bannerServicios h1{
+    background-image:url("/static/Media/Componentes 27-9-22/Banner/Propuesta de Diseño-45.jpg" );
+}
+
+#bannerDocumento{
+    background-image:url("/static/Media/Componentes 27-9-22/Banner/Propuesta de Diseño-180.jpg" );
+}
+#bannerDocumento h1{
+    background-image:url("/static/Media/Componentes 27-9-22/Banner/Propuesta de Diseño-44.jpg" );
+}
+
+#bannerEncuesta{
+    background-image:url("/static/Media/Componentes 27-9-22/Banner/Propuesta de Diseño-180.jpg" );
+}
+#bannerEncuesta h1{
+    background-image:url("/static/Media/Componentes 27-9-22/Banner/Propuesta de Diseño-47.jpg" );
+}
+
+@media screen and (max-width:720px) {
+    .bannerclass h1{
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+    }
+}
+/*-------------------------------------------------------------*/
+/*.nuevaSeccion *{
+    border: 1px solid rebeccapurple; 
+}*/
+.nuevaSeccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+.SeccionesGenerales{
+    clear: both; 
+    margin: 70px 20px 0px 20px;
+    max-width: 950px;    
+}
+.SeccionesGenerales h2{
+    color: rgb(153, 25, 25);
+    margin-bottom: 40px;
+}
+.SeccionesGenerales section{
+    padding-bottom: 100px ;
+}
+.SegundoBloque{
+    margin-top: -240px;
+}
+.seccionInicial div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 30px;
+}
+/*---------------------------------------------------------*/
+.cartasGenerales{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    row-gap: 10px;
+}
+.cartasGenerales article{
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px 20px 10px 20px;
+}
+.cartasGenerales h3,
+.cartasGenerales p{
+    padding-bottom: 20px;
+}
+/*---------------------------------------------------------*/
+#lineaDeTiempoContinuo{
+    margin-top: 0px;
+    height: 1px;
+    background-color: rgb(220,220,220);
+}
+.HistoriaSlider{
+    display: flex;
+    border-radius: 0px;
+    gap: 10px;
+    cursor: all-scroll ;
+    overflow-x: hidden ;
+    margin-top: -10px;
+    padding-top: 0px;
+}
+.HistoriaSlider article{
+    width: 190px;
+    min-width: 190px;
+    pointer-events: none;
+}
+.lineaDeTiempo{    
+    margin: 5px 20px 30px 0px;
+}
+.lineaDeTiempo div{
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgb(220,220,220);
+}
+.blanco h2{
+    color: rgb(220,220,220);
+}
+/*---------------------------------------------------------*/
+.backgraondline{  
+    height: 300px;
+    width: 100%;
+    margin-top: -40px;
+    background-image: url("/static//Media/Componentes 27-9-22/Banner/Propuesta de Diseño-49.jpg");
+    background-size: 100% 100%;
+}
+/*---------------------------------------------------------*/
+.cartasEquipo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top:30px ;
+}
+.cartaEquipo{
+    border-radius: 10px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    margin-bottom: 20px;
+    max-width: 100%;
+    min-width: 270px;
+}
+.cartaEquipo strong{
+    font-size: 12pt;
+}
+.fondoEquipo{
+    border-radius: 10px;
+    background-color: rgb(220,220,220);
+    height: 130px;
+    width: 130px;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+.nombre{
+    display: grid;
+    grid-template-rows: 1.2fr 1fr;
+    padding: 20px 0 20px 5px;
+}
+/*---------------------------------------------------------*/
+#Servicioscard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+#Servicioscard article{
+    margin-bottom: 30px;
+    min-width: 221px;
+}
+#Servicos_Categorias{
+    display: flex;
+    justify-content: space-between;
+    position:static ;
+    /*gap: 10px;
+    padding: 0 45px;*/
+    border-radius: 10px;
+    margin-bottom: 20px;    
+    cursor: all-scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+#Servicos_Categorias img{
+    cursor: all-scroll;
+    
+}
+#Categoria_seleccionada{
+    border-top: 2px solid white;
+    border-radius: 10px;
+    padding: 10px 0 0;
+    margin-left: 10px;/**/
+}
+#Servicos_Categorias_h3{
+    color: rgb(204, 204, 204); 
+    padding-bottom: 20px;
+}
+#Servicos_Categorias article{
+    background-color: white;
+    height: 80px;
+    width : 85px;
+    min-width : 85px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;/**/
+}
+#Servicos_Categorias img{
+    height: 45px;
+    margin-top: 15px;
+}
+
+.textoBackground p{
+    padding: 0px 40px 40px;
+}
+.cartasProductos{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+    /*border: 1px solid black;*/
+    margin-bottom: 30px;
+}
+.logoProducto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 230px;
+}
+.logoProducto img{
+    height:250px;
+    border-radius: 100%;
+    margin: -20px;
+}
+.infoProducto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 230px;
+}
+.infoProducto div{
+    display: flex;
+    justify-content: space-between;
+}
+.infoProducto img{
+    height: 40px;
+}
+.infoProducto button{
+    width: 150px;
+    max-height: 40px;
+    margin-bottom: 15px;
+}
+/*----------------------*/
+.Documentos h2{
+    margin-bottom: 30px;
+}
+.cartasDocumentos{
+    display: grid ;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+.cartasDocumentos article{
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+.cartasDocumentos div{
+    display: grid;
+    padding: 0 10px;
+    grid-template-columns: 1fr 3fr;
+    height:fit-content;
+}
+.cartasDocumentos img{
+    height: 20px;
+    padding: 10px;
+}
+.cartasDocumentos p{
+    padding: 10px 0 ;
+}
+#Buscador{
+    padding-bottom: 50px;
+    width: 97.5%;
+    /*border: 1px solid rgb(153, 25, 25);*/
+}
+#Buscador input{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px solid;
+    margin: 0 -102px 0 0;
+    padding: 0 0 0 15px;
+}
+@media screen and (max-width:1000px) {
+    #Servicioscard{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:855px) {
+    .cartasEquipo{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:720px) {
+    #Servicioscard{
+        grid-template-columns: 1fr 1fr;
+    }
+    .cartasDocumentos{
+        grid-template-columns: 1fr 1fr;
+    }
+    .DocumentosRecientes{
+        grid-template-columns: 1fr;
+        width: 80%;
+        margin: 0 50px;
+    }
+}
+
+@media screen and (max-width:570px) {
+    .cartasEquipo{
+        grid-template-columns: 1fr;
+    }
+    .cartaEquipo{
+        margin-bottom: 0px;
+    }
+    .cartasGenerales{
+        grid-template-columns: 1fr;
+    }
+    .cartasGenerales article{
+        margin-top: 0px;
+    }
+    .seccionInicial div{
+        grid-template-columns: 1fr;
+    }
+    
+}
+@media screen and (max-width:480px) {
+    #Servicioscard{
+        grid-template-columns: 1fr;
+    }
+    #Servicioscard article{
+        margin-bottom: 10px;
+    }
+    .cartasDocumentos{
+        grid-template-columns: 1fr;
+    }
+    .DocumentosRecientes{
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin: 0;
+    }
+}

@@ -1,0 +1,55 @@
+{% extends "Home/base.html" %}
+{% load static %}
+{% block content %}
+<div class="nuevaSeccion">
+    <section id="bannerServicios" class="bannerclass">
+        <h1>Somos la <br> empresa que <br> constuye el futuro <br> con inteligencia</h1>
+    </section>
+    <div class="SeccionesGenerales">
+        <section class="seccionInicial">
+            <header> <h2>Politicas de servicios</h2></header>
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure.
+                </p>
+                <p>
+                    Dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                </p>    
+            </div>
+        </section>
+    </div>
+    <div class="backgraondline"></div>
+    <div class="SeccionesGenerales SegundoBloque">
+        <div class="textoBackground">
+            <header class="blanco"><h2>Servicios</h2></header>
+            <div id="Servicos_Categorias">
+                {% for i in categorias %}
+                <div id="{{i.id}}" >
+                    <article id="{{i.id}}">
+                        <img id="{{i.id}}" src="{{i.imagen.url}}" alt="icono" draggable="false">
+                    </article>
+                </div>
+                {% endfor %}
+            </div>
+            <h3 id="Servicos_Categorias_h3">
+                <small> Categorias de servicios. </small>
+            </h3>
+        </div>
+        
+        <div id="Servicioscard" class="card ">
+            
+            {% for i in servicios %}
+
+                <article id="{{i.Categoria.id}}">
+                    <img src="{{i.Iconos.url}}" alt="icono">
+                    <p>
+                        {{i}}
+                    </p>
+                </article>
+
+            {% endfor %}
+            
+        </div>
+    </div>
+</div>
+{% endblock %}
