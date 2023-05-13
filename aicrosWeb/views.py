@@ -37,6 +37,6 @@ def enviaste_un_email(request):
         contenido       = request.POST['Contenido'] + ' ' + request.POST['Correo']
         remitente       = request.POST['Correo']
         destinatario    = settings.EMAIL_HOST_USER
-
+        
         #  send_mail( asunto, contenido, destinatario, [ remitente ], fail_silently = False, )
         send_mail( asunto, contenido, remitente, [ destinatario ], fail_silently = False )
