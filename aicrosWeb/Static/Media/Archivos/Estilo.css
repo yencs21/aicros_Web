@@ -437,6 +437,7 @@ body{
     display: flex;
     margin: 0px 0px 100px;
     overflow-x: hidden;
+    overflow-y: hidden;
     cursor:all-scroll; 
 }
 .target article{

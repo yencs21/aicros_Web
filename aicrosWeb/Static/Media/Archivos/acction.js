@@ -11,6 +11,8 @@ function iniciar(e){
         inicilizacionSlider(".card",3600,true);
         inicilizacionSlider(".target",3700,true);
         inicilizacionSlider("#alianza",2000,true);
+        footer = document.querySelector("footer");
+        footer.style.width = "101%"
     }else if(window.PaginaActual.PaginaActual== "Nosotros"){
         inicilizacionSlider(".HistoriaSlider",3000,false);
     }else if(window.PaginaActual.PaginaActual== "Servicios" ){
